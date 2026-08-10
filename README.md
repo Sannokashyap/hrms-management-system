@@ -95,6 +95,7 @@ Or run the project directly from Eclipse as a Spring Boot application.
 * Report Generation
 
 ## Repository
+https://github.com/Sannokashyap/hrms-management-system.git
 
 ## Author
 
