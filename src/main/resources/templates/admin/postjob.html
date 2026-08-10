@@ -1,0 +1,153 @@
+<html lang="en" th:replace="~{admin/adminbase :: layout(~{::main})}">
+<body>
+ <main>
+ 	<h2 style="color:black;text-align:center">Post jobs Details</h2>
+ 	<div th:if="${msg}">
+ 	<p th:text="${msg}" style="color:green;text-align:center;"></p>
+ 	</div>
+ 	<hr>
+ 	<form method="post" th:object="${jdto}">
+
+<div class="container py-4">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+            <div class="card shadow border-0">
+
+                <!-- Header -->
+                <div class="card-header text-white py-3"
+                      style="background: linear-gradient(135deg, #2563EB 0%, #4F46E5 45%, #7C3AED 75%, #6D28D9 100%);">
+
+                    <h3 class="mb-1 text-white fw-bold">Post New Job</h3>
+                    <small>Fill all required details to publish a new job.</small>
+
+                </div>
+
+                <!-- Body -->
+                <div class="card-body p-4">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Job Title</label>
+
+                            <input type="text"
+                                   th:field="${jdto.title}"
+                                   class="form-control"
+                                   placeholder="Enter Job Title"
+                                   style="border-radius:10px;height:45px;"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Location</label>
+
+                            <input type="text"
+                                   th:field="${jdto.location}"
+                                   class="form-control"
+                                   placeholder="Enter Location"
+                                   style="border-radius:10px;height:45px;"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Salary</label>
+
+                            <input type="number"
+                                   th:field="${jdto.salary}"
+                                   class="form-control"
+                                   placeholder="Enter Salary"
+                                   style="border-radius:10px;height:45px;"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Job Type</label>
+
+                            <select th:field="${jdto.jobtype}"
+                                    class="form-select"
+                                    style="border-radius:10px;height:45px;">
+
+                                <option value="">Select Job Type</option>
+                                <option value="Full Time">Full Time</option>
+                                <option value="Part Time">Part Time</option>
+                                <option value="Internship">Internship</option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Last Date</label>
+
+                            <input type="date"
+                                   th:field="${jdto.lastdate}"
+                                   class="form-control"
+                                   style="border-radius:10px;height:45px;"
+                                   required>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">Job Description</label>
+
+                            <textarea
+                                th:field="${jdto.description}"
+                                rows="5"
+                                class="form-control"
+                                placeholder="Enter complete job description..."
+                                style="border-radius:10px;"
+                                required></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="text-end mt-4">
+
+                        <button type="reset"
+                                class="btn btn-outline-secondary px-4">
+                            Reset
+                        </button>
+
+                        <button type="submit"
+                                class="btn btn-primary px-4 ms-2"
+                                style="background:#2563eb;border:none;">
+                            Post Job
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</form>
+ </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

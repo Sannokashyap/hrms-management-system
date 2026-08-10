@@ -1,0 +1,408 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: layout(~{::main})}">
+<body>
+<main>
+
+ <!-- Hero Section -->
+<section class="text-white hero d-flex align-items-center">
+    
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8 text-center">
+
+                <span class="badge bg-light text-warning px-3 py-2">
+                    Contact HR Synergy
+                </span>
+
+                <h2 class="display-4 text-warning fw-bold mt-4">
+                    Get In Touch With HR 
+                    <br>
+                    Synergy
+                </h2>
+
+                <p class="lead mt-3">
+
+                    We'd love to hear from you. Whether you have a question,
+                    feedback or need assistance, our team is always ready
+                    to help.
+
+                </p>
+
+                <a href="#contactForm"
+                    class="btn btn-light btn-lg rounded-pill px-4 mt-2">
+
+                    <i class="bi bi-envelope-fill me-2"></i>
+
+                    Send Enquiry
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Overlap Container -->
+<div class="container"
+     id="contactForm"
+     style="margin-top:-90px; position:relative; z-index:10;">
+
+    <div class="row g-4 align-items-stretch">
+
+        <!-- Left Card Start -->
+
+        <div class="col-lg-4">
+
+            <div class="card border-0 shadow-lg rounded-4 h-100">
+
+                <div class="card-body hero p-4 text-white"
+                     style="background:#1a3747">
+
+                    <div class="text-center">
+
+                        <div class="bg-white rounded-circle d-inline-flex
+                             justify-content-center align-items-center"
+                             style="height:90px;width:90px;">
+
+                           <i class="bi bi-telephone-fill"
+                               style="color:#0f766e;"></i>
+
+                        </div>
+
+                        <h3 class="fw-bold mt-4">
+
+                            Contact Info
+
+                        </h3>
+
+                        <p class="opacity-75">
+
+                            Feel free to contact us anytime.
+
+                        </p>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="mt-4">
+
+                        <p>
+
+                            <i class="bi bi-geo-alt-fill me-3"></i>
+
+                            Lucknow, Uttar Pradesh
+
+                        </p>
+
+                        <p>
+
+                            <i class="bi bi-envelope-fill me-3"></i>
+
+                            hrsynergy@gmail.com
+
+                        </p>
+
+                        <p>
+
+                            <i class="bi bi-telephone-fill me-3"></i>
+
+                            +91 9876543210
+
+                        </p>
+
+                        <p>
+
+                            <i class="bi bi-clock-fill me-3"></i>
+
+                            Mon - Sat (9:00 AM - 6:00 PM)
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Form yahi se start hoga -->
+        
+        <!-- Right Form -->
+
+<div class="col-lg-8">
+
+    <div class="card border-0 shadow-lg rounded-4 h-100">
+
+        <div class="card-body p-5">
+
+            <small class="fw-bold text-uppercase"
+                style="color:#0f766e;">
+
+                Send Enquiry
+
+            </small>
+
+            <h2 class="fw-bold mt-2">
+
+                We'd Love To Hear From You
+
+            </h2>
+
+            <p class="text-secondary mb-4">
+
+                Fill out the form below and our HR team will contact you
+                as soon as possible.
+
+            </p>
+
+            <form method="post" th:object="${edto}">
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label fw-semibold">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            th:field="*{name}"
+                            class="form-control form-control-lg"
+                            placeholder="Enter your full name">
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label fw-semibold">
+                            Contact Number
+                        </label>
+
+                        <input
+                            type="text"
+                            th:field="*{contact_no}"
+                            class="form-control form-control-lg"
+                            placeholder="Enter mobile number">
+
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label fw-semibold">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        th:field="*{emailaddress}"
+                        class="form-control form-control-lg"
+                        placeholder="Enter your email">
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label fw-semibold">
+                        Address
+                    </label>
+
+                    <textarea
+                        rows="3"
+                        th:field="*{address}"
+                        class="form-control"
+                        placeholder="Enter your address"></textarea>
+
+                </div>
+
+                <div class="mb-4">
+
+                    <label class="form-label fw-semibold">
+                        Your Enquiry
+                    </label>
+
+                    <textarea
+                        rows="5"
+                        th:field="*{enquirytext}"
+                        class="form-control"
+                        placeholder="Write your enquiry here..."></textarea>
+
+                </div>
+
+                <div th:if="${msg}"
+                    class="alert alert-success text-center"
+                    th:text="${msg}">
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-lg bg-warning text-dark px-5">
+                      
+                    <i class="bi bi-send-fill me-2"></i>
+
+                    Submit Enquiry
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+<section class="py-5" style="background:#f8fbfb;">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<small class="fw-bold text-uppercase"
+style="color:#0f766e;">
+
+WHY CONTACT US
+
+</small>
+
+<h2 class="fw-bold mt-2">
+
+Always Here To Help You
+
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+
+<div class="card border-0 shadow-sm rounded-4 text-center">
+
+<div class="card-body p-4">
+
+<i class="bi bi-headset fs-1"
+style="color:#0f766e;"></i>
+
+<h5 class="mt-3 fw-bold">
+
+24/7 Support
+
+</h5>
+
+<p class="text-secondary">
+
+Quick assistance whenever you need it.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card border-0 shadow-sm rounded-4 text-center">
+
+<div class="card-body p-4">
+
+<i class="bi bi-envelope-check fs-1"
+style="color:#0f766e;"></i>
+
+<h5 class="mt-3 fw-bold">
+
+Fast Response
+
+</h5>
+
+<p class="text-secondary">
+
+We reply within 24 hours.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card border-0 shadow-sm rounded-4 text-center">
+
+<div class="card-body p-4">
+
+<i class="bi bi-people-fill fs-1"
+style="color:#0f766e;"></i>
+
+<h5 class="mt-3 fw-bold">
+
+Expert Team
+
+</h5>
+
+<p class="text-secondary">
+
+Experienced HR professionals.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card border-0 shadow-sm rounded-4 text-center">
+
+<div class="card-body p-4">
+
+<i class="bi bi-shield-check fs-1"
+style="color:#0f766e;"></i>
+
+<h5 class="mt-3 fw-bold">
+
+Trusted Service
+
+</h5>
+
+<p class="text-secondary">
+
+Reliable and secure communication.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+</main>
+</body>
+
+</html>

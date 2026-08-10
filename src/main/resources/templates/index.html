@@ -1,0 +1,297 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: layout(~{::main})}">
+<body>
+<main>
+
+<!-- ================= HERO ================= -->
+  <header id="home" class="py-5"  style="background:linear-gradient(to right,#eef5ff,#ffffff);">
+    <div class="container py-lg-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span
+            class="badge bg-white text-primary border border-primary-subtle rounded-pill px-3 py-2 mb-3 fw-medium">Modern
+            HRMS Solution</span>
+          <h2 class="display-4 fw-bold mb-3">Manage Your Human Resources Smarter</h2>
+          <p class="text-muted fs-5 mb-4">
+            HR Synergy is a smart Human Resource Management System for employee management, attendance, leave, payroll,
+            recruitment, feedback and performance tracking.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#login" class="btn  rounded-pill text-white px-4"  style="background: linear-gradient(135deg, #2563EB 0%, #4F46E5 45%, #7C3AED 75%, #6D28D9 100%);">Login Now</a>
+            <a href="#jobs" class="btn btn-outline-primary btn-lg rounded-pill px-4">View Jobs</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+
+    <div class="bg-white p-3 shadow"
+         style="border-radius:22px;">
+
+        <img src="/images/hrms-banner.jpeg"
+             class="img-fluid w-100"
+             alt="HR Banner"
+             style="border-radius:15px;">
+
+    </div>
+
+</div>
+      </div>
+    </div>
+  </header>
+  
+  
+  <!-- ================= STATS ================= -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div
+              class="mx-auto mb-3 d-flex align-items-center justify-content-center bg-primary bg-gradient text-white rounded-3"
+              style="width:56px;height:56px;">
+              <i class="bi bi-laptop fs-4"></i>
+            </div>
+            <h3 class="fw-bold text-primary mb-0">100%</h3>
+            <p class="text-muted mb-0">Digital Process</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div
+              class="mx-auto mb-3 d-flex align-items-center justify-content-center bg-primary bg-gradient text-white rounded-3"
+              style="width:56px;height:56px;">
+              <i class="bi bi-clock-history fs-4"></i>
+            </div>
+            <h3 class="fw-bold text-primary mb-0">24/7</h3>
+            <p class="text-muted mb-0">Employee Access</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div
+              class="mx-auto mb-3 d-flex align-items-center justify-content-center bg-primary bg-gradient text-white rounded-3"
+              style="width:56px;height:56px;">
+              <i class="bi bi-shield-check fs-4"></i>
+            </div>
+            <h3 class="fw-bold text-primary mb-0">Secure</h3>
+            <p class="text-muted mb-0">Role Login</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div
+              class="mx-auto mb-3 d-flex align-items-center justify-content-center bg-primary bg-gradient text-white rounded-3"
+              style="width:56px;height:56px;">
+              <i class="bi bi-speedometer2 fs-4"></i>
+            </div>
+            <h3 class="fw-bold text-primary mb-0">Easy</h3>
+            <p class="text-muted mb-0">HR Control</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="bg-light py-5">
+    <div class="container py-lg-3">
+      <div class="row align-items-center g-5">
+       <div class="col-lg-5">
+    <img src="/images/corporate.jpeg"
+         class="img-fluid w-100 bg-white p-3 shadow rounded-4 "
+      style="border-radius:22px;"
+         alt="Team meeting">
+</div>
+        <div class="col-lg-7">
+          <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 mb-3 fw-medium">About HR
+            Synergy</span>
+          <h2 class="fw-bold mb-3">Complete HR Management Platform</h2>
+          <p class="text-muted mb-4">
+            HR Synergy helps organizations reduce manual work and manage HR operations through a centralized, secure and
+            user-friendly platform.
+          </p>
+          <div class="row g-3">
+            <div class="col-md-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-primary"></i>
+              <span class="fw-medium">Employee Management</span>
+            </div>
+            <div class="col-md-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-primary"></i>
+              <span class="fw-medium">Attendance Tracking</span>
+            </div>
+            <div class="col-md-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-primary"></i>
+              <span class="fw-medium">Leave Management</span>
+            </div>
+            <div class="col-md-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-primary"></i>
+              <span class="fw-medium">Payroll System</span>
+            </div>
+            <div class="col-md-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-primary"></i>
+              <span class="fw-medium">Recruitment Module</span>
+            </div>
+            <div class="col-md-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-primary"></i>
+              <span class="fw-medium">Feedback System</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="py-5 bg-white">
+    <div class="container py-lg-3 text-center">
+      <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 mb-3 fw-medium">HRMS
+        Modules</span>
+      <h2 class="fw-bold mb-2">Powerful Features</h2>
+      <p class="text-muted mb-5">All important HR operations in one digital platform.</p>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div
+              class="mx-auto mb-3 d-flex align-items-center justify-content-center bg-primary bg-gradient text-white rounded-3"
+              style="width:56px;height:56px;">
+              <i class="bi bi-person-fill fs-4"></i>
+            </div>
+            <h5 class="fw-bold">Employee Management</h5>
+            <p class="text-muted mb-0">Manage employee records, profile and departments.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div
+              class="mx-auto mb-3 d-flex align-items-center justify-content-center bg-primary bg-gradient text-white rounded-3"
+              style="width:56px;height:56px;">
+              <i class="bi bi-calendar2-check-fill fs-4"></i>
+            </div>
+            <h5 class="fw-bold">Attendance</h5>
+            <p class="text-muted mb-0">Track daily attendance and working records.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div
+              class="mx-auto mb-3 d-flex align-items-center justify-content-center bg-primary bg-gradient text-white rounded-3"
+              style="width:56px;height:56px;">
+              <i class="bi bi-airplane-fill fs-4"></i>
+            </div>
+            <h5 class="fw-bold">Leave Management</h5>
+            <p class="text-muted mb-0">Apply, approve and manage employee leaves.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div
+              class="mx-auto mb-3 d-flex align-items-center justify-content-center bg-primary bg-gradient text-white rounded-3"
+              style="width:56px;height:56px;">
+              <i class="bi bi-cash-stack fs-4"></i>
+            </div>
+            <h5 class="fw-bold">Payroll</h5>
+            <p class="text-muted mb-0">Manage salary and payroll records professionally.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ================= EMPLOYEE BENEFITS CTA ================= -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="card border-0 rounded-5 text-white overflow-hidden"
+        style="background:linear-gradient(120deg,#2952e3,#7b2ff7);">
+        <div class="card-body p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <span class="badge bg-white text-primary rounded-pill px-3 py-2 mb-3 fw-medium">Employee Benefits</span>
+              <h2 class="fw-bold mb-3">Better Employee Experience</h2>
+              <p class="mb-4 opacity-75">
+                Provide organized HR services, employee support, benefit details and a smooth digital experience.
+              </p>
+              <a href="#dashboard" class="btn btn-light btn-lg rounded-pill px-4 fw-medium text-primary">Explore
+                Dashboard</a>
+            </div>
+            <div class="col-lg-6">
+              <img src="/images/employee-benefits.jpeg"
+                class="img-fluid rounded-4 shadow" alt="Employee benefits">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORKFLOW ================= -->
+  <section class="py-5 bg-white">
+    <div class="container py-lg-3 text-center">
+      <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 mb-3 fw-medium">Workflow</span>
+      <h2 class="fw-bold mb-5">How HR Synergy Works</h2>
+      <div class="row g-4 text-start">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 border-start border-primary border-4 shadow-sm rounded-4 p-4">
+            <h2 class="fw-bold text-primary-emphasis text-opacity-25 opacity-50">01</h2>
+            <h5 class="fw-bold">Admin Setup</h5>
+            <p class="text-muted mb-0">Admin adds employees, departments, salary and login credentials.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 border-start border-primary border-4 shadow-sm rounded-4 p-4">
+            <h2 class="fw-bold text-primary-emphasis text-opacity-25 opacity-50">02</h2>
+            <h5 class="fw-bold">Employee Login</h5>
+            <p class="text-muted mb-0">Employees login to view profile, apply leave and give feedback.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 border-start border-primary border-4 shadow-sm rounded-4 p-4">
+            <h2 class="fw-bold text-primary-emphasis text-opacity-25 opacity-50">03</h2>
+            <h5 class="fw-bold">HR Monitoring</h5>
+            <p class="text-muted mb-0">Admin manages requests, employee data and reports.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ================= GALLERY ================= -->
+  <section class="py-5 bg-light">
+    <div class="container py-lg-3 text-center">
+      <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 mb-3 fw-medium">Gallery</span>
+      <h2 class="fw-bold mb-5">HRMS Visuals</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="/images/support.jpeg"
+            class="img-fluid rounded-4 shadow-sm w-100" style="height:220px;object-fit:cover;" alt="HRMS visual 1">
+        </div>
+        <div class="col-md-4">
+          <img src="/images/hrms-banner.jpeg"
+            class="img-fluid rounded-4 shadow-sm w-100" style="height:220px;object-fit:cover;" alt="HRMS visual 2">
+        </div>
+        <div class="col-md-4">
+          <img src="/images/corporate.jpeg"
+            class="img-fluid rounded-4 shadow-sm w-100" style="height:220px;object-fit:cover;" alt="HRMS visual 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="card border-0 rounded-5 text-white text-center"
+        style="background:linear-gradient(120deg,#2952e3,#7b2ff7);">
+        <div class="card-body p-5">
+          <h2 class="fw-bold mb-2">Start Managing HR Smarter</h2>
+          <p class="mb-4 opacity-75">Login to access HR Synergy dashboard and manage your HR operations.</p>
+          <a href="#login" class="btn btn-light btn-lg rounded-pill px-5 fw-medium text-primary">Login Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+</main>
+</body>
+
+</html>

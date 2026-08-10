@@ -1,0 +1,129 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base :: layout(~{::main})}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HR Synergy Login</title>
+<body>
+	<main>
+		
+
+		<div class="container-fluid bg-primary bg-opacity-10 py-5">
+
+    <div class="row justify-content-center align-items-center">
+
+        <div class="col-md-5">
+
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+
+                <!-- Header -->
+                <div class="card-header text-center border-0 py-4"
+                       style="background: linear-gradient(135deg, #2563EB 0%, #4F46E5 45%, #7C3AED 75%, #6D28D9 100%);">
+
+                    <i class="bi bi-shield-lock-fill text-white fs-1"></i>
+
+                    <h3 class="text-white fw-bold mt-2 mb-1">
+                        Admin Login
+                    </h3>
+
+                    <small class="text-white opacity-75">
+                        Secure Dashboard Access
+                    </small>
+
+                </div>
+
+                <!-- Body -->
+                <div class="card-body p-4 bg-white">
+
+                    <div th:if="${msg}" class="alert alert-danger text-center"
+                        th:text="${msg}">
+                    </div>
+
+                    <form method="post" th:object="${aidto}">
+
+                        <!-- Admin ID -->
+                        <div class="mb-3">
+
+                            <label class="form-label fw-semibold"
+                                style="color:#0f766e;">
+                                Admin ID
+                            </label>
+
+                            <div class="input-group">
+
+                                <span class="input-group-text bg-white">
+                                    <i class="bi bi-person-fill"
+                                        style="color:#0f766e;"></i>
+                                </span>
+
+                                <input type="text"
+                                    th:field="*{adminid}"
+                                    class="form-control shadow-none"
+                                    placeholder="Enter Admin ID">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-4">
+
+                            <label class="form-label fw-semibold"
+                                style="color:#0f766e;">
+                                Password
+                            </label>
+
+                            <div class="input-group">
+
+                                <span class="input-group-text bg-white">
+                                    <i class="bi bi-lock-fill"
+                                        style="color:#0f766e;"></i>
+                                </span>
+
+                                <input type="password"
+                                    th:field="*{password}"
+                                    class="form-control shadow-none"
+                                    placeholder="Enter Password">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Button -->
+                        <div class="d-grid">
+
+                            <button type="submit"
+                                class="btn text-white fw-bold py-2 rounded-3"
+                               style="background: linear-gradient(135deg, #2563EB 0%, #4F46E5 45%, #7C3AED 75%, #6D28D9 100%);">
+
+                                <i class="bi bi-box-arrow-in-right me-2"></i>
+                                Login
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="card-footer bg-light text-center border-0 py-3">
+
+                    <small class="text-secondary">
+                        © HRMS Admin Panel
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+	</main>
+</body>
+
+</html>

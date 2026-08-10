@@ -1,0 +1,96 @@
+<html lang="en" th:replace="~{admin/adminbase :: layout(~{::main})}">
+<body>
+	<main>
+		<h1>View All Complaint</h1>
+		<hr>
+		
+		<div  th:if="${msg}">
+		<p th:text="${msg}" style="color:red;text-align:center;"></p>
+		</div>
+		
+		<div class="container py-5">
+
+    <div class="card border-0 shadow-lg ">
+
+        <div class="card-header text-white py-4 border-0"
+             style="background: linear-gradient(135deg, #2563EB 0%, #4F46E5 45%, #7C3AED 75%, #6D28D9 100%);">
+
+            <h3 class="fw-bold text-white mb-1">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                Employee Complaint List
+            </h3>
+
+            <p class="mb-0">
+                View all submitted complaints and issues
+            </p>
+
+        </div>
+
+        <div class="card-body p-0">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle mb-0">
+
+                    <thead class="table-dark">
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Contact No</th>
+                            <th>Subject</th>
+                            <th>Complaint</th>
+                            <th>Posted Date</th>
+                            <th>Delete</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="c:${comp}">
+
+                            <td th:text="${c.id}"></td>
+
+                            <td>
+                                <span class="fw-semibold"
+                                    th:text="${c.name}"></span>
+                            </td>
+
+                            <td th:text="${c.contactno}"></td>
+
+                            <td>
+                                <span class="badge bg-danger"
+                                    th:text="${c.subject}">
+                                </span>
+                            </td>
+
+                            <td th:text="${c.responsetext}"></td>
+
+                            <td>
+                                <span class="text-success fw-semibold"
+                                    th:text="${c.postdate}">
+                                </span>
+                            </td>
+                            
+                             <td>
+                        <a th:href="@{/admin/deletecomp(id=${c.id})}" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                            
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+	</main>
+</body>
+</html>

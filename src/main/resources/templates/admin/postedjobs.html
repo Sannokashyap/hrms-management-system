@@ -1,0 +1,97 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{admin/adminbase :: layout(~{::main})}">
+<body>
+	<main>
+		<h1>View Posted jobs</h1>
+		<hr />
+<div  th:if="${msg}">
+		<p th:text="${msg}" style="color:red;text-align:center;"></p>
+		</div>
+
+		<div class="container-fluid py-4">
+
+    <div class="card shadow-sm border-0">
+
+        <!-- Header -->
+        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+
+            <div>
+                <h4 class="mb-1 fw-bold">Posted Jobs</h4>
+                <small class="text-muted">List of all available job postings</small>
+            </div>
+
+            <span class="badge bg-primary fs-6"
+                  th:text="${#lists.size(jinfo)} + ' Jobs'"></span>
+
+        </div>
+
+        <!-- Table -->
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-dark">
+
+                        <tr class="text-center">
+
+                            <th>ID</th>
+                            <th>Job Title</th>
+                            <th>Description</th>
+                            <th>Location</th>
+                            <th>Salary</th>
+                            <th>Job Type</th>
+                            <th>Last Date</th>
+                            <th>Posted Date</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="j : ${jinfo}" class="text-center">
+
+                            <td th:text="${j.id}"></td>
+
+                            <td class="fw-semibold text-start"
+                                th:text="${j.title}"></td>
+
+                            <td class="text-start"
+                                style="max-width:250px;"
+                                th:text="${j.description}"></td>
+
+                            <td th:text="${j.location}"></td>
+
+                            <td class="fw-semibold text-success"
+                                th:text="'₹ ' + ${j.salary}"></td>
+
+                            <td>
+                                <span class="badge bg-info"
+                                      th:text="${j.jobtype}"></span>
+                            </td>
+
+                            <td th:text="${j.lastdate}"></td>
+
+                            <td th:text="${j.postdate}"></td>
+                            <td>
+                        <a th:href="@{/admin/deletejobs(id=${j.id})}" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+	</main>
+</body>

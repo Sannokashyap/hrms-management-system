@@ -1,0 +1,833 @@
+<html lang="en" th:replace="~{user/userbase :: layout(~{::main})}">
+<body>
+ <main>
+ 	
+ 	<!-- ================= Dashboard Header ================= -->
+
+<div class="container-fluid py-4">
+
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+
+            <h3 class="fw-bold mb-1">
+                Candidate Dashboard
+            </h3>
+
+            <p class="text-muted mb-0">
+                Manage your career journey
+            </p>
+
+        </div>
+    </div>
+
+
+
+    <!-- ================= Hero Section ================= -->
+
+    <div class="card border-0 shadow mb-4 overflow-hidden"
+        style="background:linear-gradient(135deg,#2563eb,#6d28d9);border-radius:20px;">
+
+        <div class="card-body p-5">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <span class="badge bg-light text-primary mb-3">
+                        ⭐ Career Portal
+                    </span>
+
+                    <h2 class="fw-bold text-white">
+                        Welcome to HR Synergy
+                        <br>
+                        Career Portal
+                    </h2>
+
+                    <p class="text-white mt-3 opacity-75">
+
+                        Explore job opportunities, manage your profile,
+                        update your resume and track all your applications.
+
+                    </p>
+
+                    <div class="mt-4">
+
+                        <a href="#"
+                            class="btn btn-light fw-semibold px-4 me-2">
+
+                            <i class="bi bi-briefcase-fill me-2"></i>
+
+                            Browse Jobs
+
+                        </a>
+
+                        <a href="#"
+                            class="btn btn-outline-light fw-semibold px-4">
+
+                            <i class="bi bi-file-earmark-text me-2"></i>
+
+                            My Applications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Right Side -->
+
+                <div class="col-lg-4">
+
+                    <div class="card border-0 shadow-sm mb-3"
+                        style="background:rgba(255,255,255,.12);backdrop-filter:blur(10px);">
+
+                        <div class="card-body">
+
+                            <h5 class="text-white">
+
+                                🚀 Career Growth
+
+                            </h5>
+
+                            <small class="text-white">
+
+                                Track your journey
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card border-0 shadow-sm"
+                        style="background:rgba(255,255,255,.12);backdrop-filter:blur(10px);">
+
+                        <div class="card-body">
+
+                            <h5 class="text-white">
+
+                                ✔ Applications
+
+                            </h5>
+
+                            <small class="text-white">
+
+                                Manage with ease
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= Statistics ================= -->
+
+    <div class="row g-4">
+
+        <div class="col-lg-3">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="bg-primary rounded-circle p-3 me-3">
+
+                            <i class="bi bi-briefcase-fill text-white fs-4"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="fw-bold mb-0">12</h4>
+
+                            <small class="text-muted">
+                                Available Jobs
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-lg-3">
+
+            <div class="card shadow-sm border-0 ">
+
+                <div class="card-body">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="bg-warning rounded-circle p-3 me-3">
+
+                            <i class="bi bi-file-earmark-check-fill text-white fs-4"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="fw-bold mb-0">5</h4>
+
+                            <small class="text-muted">
+
+                                Applications
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-lg-3">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="bg-success rounded-circle p-3 me-3">
+
+                            <i class="bi bi-person-check-fill text-white fs-4"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="fw-bold mb-0">
+
+                                Active
+
+                            </h4>
+
+                            <small class="text-muted">
+
+                                Profile Status
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-lg-3">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="bg-info rounded-circle p-3 me-3">
+
+                            <i class="bi bi-award-fill text-white fs-4"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="fw-bold mb-0">
+
+                                3
+
+                            </h4>
+
+                            <small class="text-muted">
+
+                                Shortlisted
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= Quick Actions ================= -->
+
+<div class="container-fluid mt-4" style="border-radius:30px;">
+
+    <div class="d-flex align-items-center mb-4">
+
+        <div style="width:5px;height:30px;background:#2563eb;border-radius:5px;"></div>
+
+        <h3 class="fw-bold ms-3 mb-0">
+            <i class="bi bi-stack"></i>
+            Quick Actions
+        </h3>
+
+    </div>
+
+
+    <div class="row g-4">
+
+        <!-- Available Jobs -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <div class="rounded-circle bg-primary d-inline-flex
+                        align-items-center justify-content-center mb-3"
+                        style="width:70px;height:70px;">
+
+                        <i class="bi bi-briefcase-fill text-white fs-3"></i>
+
+                    </div>
+
+                    <h4 class="fw-bold">
+                        Available Jobs
+                    </h4>
+
+                    <p class="text-muted">
+
+                        Explore current vacancies and apply for suitable jobs.
+
+                    </p>
+
+                    <a href="#"
+                        class="btn btn-primary w-100">
+
+                        View Jobs
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Applications -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <div class="rounded-circle bg-warning d-inline-flex
+                        align-items-center justify-content-center mb-3"
+                        style="width:70px;height:70px;">
+
+                        <i class="bi bi-file-earmark-check-fill text-white fs-3"></i>
+
+                    </div>
+
+                    <h4 class="fw-bold">
+
+                        My Applications
+
+                    </h4>
+
+                    <p class="text-muted">
+
+                        Track all submitted applications.
+
+                    </p>
+
+                    <a href="#"
+                        class="btn btn-warning text-white w-100">
+
+                        View Applications
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Profile -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <div class="rounded-circle bg-success d-inline-flex
+                        align-items-center justify-content-center mb-3"
+                        style="width:70px;height:70px;">
+
+                        <i class="bi bi-person-badge-fill text-white fs-3"></i>
+
+                    </div>
+
+                    <h4 class="fw-bold">
+
+                        My Profile
+
+                    </h4>
+
+                    <p class="text-muted">
+
+                        View and update your profile details.
+
+                    </p>
+
+                    <a href="#"
+                        class="btn btn-success w-100">
+
+                        View Profile
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Edit Profile -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <div class="rounded-circle bg-info d-inline-flex
+                        align-items-center justify-content-center mb-3"
+                        style="width:70px;height:70px;">
+
+                        <i class="bi bi-pencil-square text-white fs-3"></i>
+
+                    </div>
+
+                    <h4 class="fw-bold">
+
+                        Edit Profile
+
+                    </h4>
+
+                    <p class="text-muted">
+
+                        Update your personal information.
+
+                    </p>
+
+                    <a href="#"
+                        class="btn btn-info text-white w-100">
+
+                        Edit Profile
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Change Password -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <div class="rounded-circle bg-secondary d-inline-flex
+                        align-items-center justify-content-center mb-3"
+                        style="width:70px;height:70px;">
+
+                        <i class="bi bi-key-fill text-white fs-3"></i>
+
+                    </div>
+
+                    <h4 class="fw-bold">
+
+                        Change Password
+
+                    </h4>
+
+                    <p class="text-muted">
+
+                        Secure your account with a new password.
+
+                    </p>
+
+                    <a href="#"
+                        class="btn btn-secondary w-100">
+
+                        Change Password
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Logout -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <div class="rounded-circle bg-danger d-inline-flex
+                        align-items-center justify-content-center mb-3"
+                        style="width:70px;height:70px;">
+
+                        <i class="bi bi-box-arrow-right text-white fs-3"></i>
+
+                    </div>
+
+                    <h4 class="fw-bold">
+
+                        Logout
+
+                    </h4>
+
+                    <p class="text-muted">
+
+                        Securely sign out of your account.
+
+                    </p>
+
+                    <a href="#"
+                        class="btn btn-danger w-100">
+
+                        Logout
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= Application Progress & Career Tips ================= -->
+
+<div class="container-fluid mt-5">
+
+    <div class="row g-4">
+
+        <!-- Progress -->
+
+        <div class="col-lg-8">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-header bg-white">
+
+                    <h4 class="fw-bold mb-0">
+                        <i class="bi bi-diagram-3-fill me-2"></i>
+                        Application Progress
+                    </h4>
+
+                </div>
+
+                <div class="card-body py-5">
+
+                    <div class="d-flex justify-content-between align-items-center text-center">
+
+                        <div>
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto"
+                                style="width:60px;height:60px;">
+                                <i class="bi bi-send-fill"></i>
+                            </div>
+
+                            <small class="fw-semibold mt-2 d-block">
+                                Applied
+                            </small>
+                        </div>
+
+                        <div class="flex-grow-1 border-top mx-3"></div>
+
+                        <div>
+                            <div class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center mx-auto"
+                                style="width:60px;height:60px;">
+                                <i class="bi bi-search"></i>
+                            </div>
+
+                            <small class="fw-semibold mt-2 d-block">
+                                Review
+                            </small>
+                        </div>
+
+                        <div class="flex-grow-1 border-top mx-3"></div>
+
+                        <div>
+                            <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center mx-auto"
+                                style="width:60px;height:60px;">
+                                <i class="bi bi-person-check-fill"></i>
+                            </div>
+
+                            <small class="fw-semibold mt-2 d-block">
+                                Interview
+                            </small>
+                        </div>
+
+                        <div class="flex-grow-1 border-top mx-3"></div>
+
+                        <div>
+                            <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center mx-auto"
+                                style="width:60px;height:60px;">
+                                <i class="bi bi-trophy-fill"></i>
+                            </div>
+
+                            <small class="fw-semibold mt-2 d-block">
+                                Hired
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Career Tips -->
+
+        <div class="col-lg-4">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-header bg-white">
+
+                    <h4 class="fw-bold mb-0">
+                        <i class="bi bi-lightbulb-fill me-2"></i>
+                        Career Tips
+                    </h4>
+
+                </div>
+
+                <div class="card-body">
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            ✅ Keep your resume updated
+                        </li>
+
+                        <li class="list-group-item">
+                            ✅ Complete your profile
+                        </li>
+
+                        <li class="list-group-item">
+                            ✅ Apply for suitable jobs
+                        </li>
+
+                        <li class="list-group-item">
+                            ✅ Prepare for interviews
+                        </li>
+
+                        <li class="list-group-item">
+                            ✅ Track application status
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= Recent Activity & Support ================= -->
+
+    <div class="row g-4 mt-2">
+
+        <!-- Recent Activity -->
+
+        <div class="col-lg-8">
+
+            <div class="card border-0 shadow-sm">
+
+                <div class="card-header bg-white">
+
+                    <h4 class="fw-bold mb-0">
+                        <i class="bi bi-clock-history me-2"></i>
+                        Recent Activity
+                    </h4>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="border-bottom pb-3 mb-3">
+
+                        <h6 class="fw-bold">
+                            👁 Profile Viewed
+                        </h6>
+
+                        <small class="text-muted">
+                            Your profile was viewed by a recruiter.
+                        </small>
+
+                    </div>
+
+                    <div class="border-bottom pb-3 mb-3">
+
+                        <h6 class="fw-bold">
+                            📄 Application Submitted
+                        </h6>
+
+                        <small class="text-muted">
+                            Successfully applied for Java Developer.
+                        </small>
+
+                    </div>
+
+                    <div>
+
+                        <h6 class="fw-bold">
+                            💼 New Jobs Posted
+                        </h6>
+
+                        <small class="text-muted">
+                            New openings are available. Apply now!
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Support -->
+
+        <div class="col-lg-4">
+
+            <div class="card border-0 shadow text-white"
+                style="background:linear-gradient(135deg,#2563eb,#6d28d9);">
+
+                <div class="card-body p-4">
+
+                    <h4 class="fw-bold">
+                        <i class="bi bi-headset me-2"></i>
+                        Recruitment Support
+                    </h4>
+
+                    <p class="mt-3">
+
+                        Need help with your application or profile?
+
+                    </p>
+
+                    <p class="mb-2">
+
+                        <i class="bi bi-envelope-fill me-2"></i>
+
+                        support@hrsynergy.com
+
+                    </p>
+
+                    <p class="mb-2">
+
+                        <i class="bi bi-telephone-fill me-2"></i>
+
+                        +91-9876543210
+
+                    </p>
+
+                    <p class="mb-4">
+
+                        <i class="bi bi-clock-fill me-2"></i>
+
+                        Mon - Fri, 9:00 AM - 6:00 PM
+
+                    </p>
+
+                    <a href="#"
+                        class="btn btn-light w-100 fw-semibold">
+
+                        <i class="bi bi-briefcase-fill me-2"></i>
+
+                        Browse Jobs
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+ </main>
+</body>
+</html>

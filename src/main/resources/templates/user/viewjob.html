@@ -1,0 +1,119 @@
+<html lang="en" th:replace="~{user/userbase :: layout(~{::main})}">
+<body>
+ <main>
+		<h2>View Job Seeker</h2>
+		<hr />
+	<div th:if="${msg}">
+ 	<p th:text="${msg}" style="color:green;text-align:center;"></p>
+ 	</div>
+		<div class="container-fluid py-4">
+
+    <div class="card shadow border-0" style="border-radius:20px; overflow:hidden;">
+
+        <!-- Header -->
+        <div class="card-header text-white d-flex justify-content-between align-items-center"
+             style="background: linear-gradient(135deg, #2563EB 0%, #4F46E5 45%, #7C3AED 75%, #6D28D9 100%);">
+
+            <div> 
+                <h3 class="mb-1 text-white fw-bold">
+                    <i class="ti ti-briefcase me-2"></i>
+                    Posted Jobs
+                </h3>	
+
+                <small>Manage all posted job openings</small>
+            </div>
+
+            <span class="badge bg-light text-primary fs-6 px-3 py-2"
+                  th:text="${#lists.size(jinfo)} + ' Jobs'">
+            </span>
+
+        </div>
+
+        <!-- Table -->
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle text-center">
+
+                    <thead class="table-dark text-white">
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Job Title</th>
+                            <th>Description</th>
+                            <th>Location</th>
+                            <th>Salary</th>
+                            <th>Job Type</th>
+                            <th>Last Date</th>
+                            <th>Posted Date</th>
+                            <th>Apply</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="j : ${jinfo}">
+
+                            <td class="fw-bold"
+                                th:text="${j.id}"></td>
+
+                            <td class="fw-semibold text-primary"
+                                th:text="${j.title}"></td>
+
+                            <td class="text-start"
+                                style="max-width:250px;"
+                                th:text="${j.description}"></td>
+
+                            <td>
+                                <span class="badge bg-info"
+                                      th:text="${j.location}">
+                                </span>
+                            </td>
+
+                            <td class="fw-bold text-success"
+                                th:text="'₹ ' + ${j.salary}">
+                            </td>
+
+                            <td>
+
+                                <span class="badge bg-primary"
+                                      th:text="${j.jobtype}">
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge bg-warning text-dark"
+                                      th:text="${j.lastdate}">
+                                </span>
+
+                            </td>
+
+                            <td th:text="${j.postdate}"></td>
+
+							<td>
+							<a th:href="@{/user/applyjob/{id}(id=${j.id})}">
+							<button type="submit" class="btn btn-success btn-sm">Apply</button>
+							</a>
+							</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+	</main>
+</body>
+</html>

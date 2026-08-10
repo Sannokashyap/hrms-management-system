@@ -1,0 +1,318 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base :: layout(~{::main})}">
+<body>
+	<main>
+<div class="container-fluid bg-primary bg-opacity-10 py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-9">
+
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+
+                <div class="row g-0">
+
+                    <!-- Left Panel -->
+                    <div class="col-lg-5 text-white p-5 d-flex flex-column justify-content-center"
+                        style="background: linear-gradient(135deg, #2563EB 0%, #4F46E5 45%, #7C3AED 75%, #6D28D9 100%);">
+
+                        <div class="mb-4">
+                            <i class="bi bi-person-plus-fill fs-1"></i>
+                        </div>
+
+                        <h2 class="fw-bold">Join With Us</h2>
+
+                        <p class="mt-3">
+                            Create your Job Seeker account and explore exciting career opportunities.
+                        </p>
+
+                        <div class="mt-4">
+                            <p><i class="bi bi-check-circle-fill me-2"></i>Create your profile</p>
+                            <p><i class="bi bi-check-circle-fill me-2"></i>Apply for jobs easily</p>
+                            <p><i class="bi bi-check-circle-fill me-2"></i>Track your applications</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Panel -->
+                    <div class="col-lg-7 p-5">
+
+                        <h3 class="fw-bold mb-3" style="color:black;">
+                            Job Seeker Registration
+                        </h3>
+
+                        <div th:if="${msg}" class="alert alert-success"
+                            th:text="${msg}"></div>
+
+                        <form th:action="@{/registration}"
+                              method="post"
+                              th:object="${udto}">
+
+                            <div class="row">
+
+                                <!-- Name -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Name</label>
+                                    <input type="text"
+                                           class="form-control"
+                                           th:field="*{name}"
+                                           placeholder="Enter Name"
+                                           required>
+                                </div>
+
+                                <!-- Contact -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Contact No</label>
+                                    <input type="number"
+                                           class="form-control"
+                                           th:field="*{contactno}"
+                                           placeholder="Enter Contact No"
+                                           required>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email"
+                                           class="form-control"
+                                           th:field="*{emailaddress}"
+                                           placeholder="Enter Email"
+                                           required>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password"
+                                           class="form-control"
+                                           th:field="*{pwd}"
+                                           placeholder="Enter Password"
+                                           required>
+                                </div>
+
+                                <!-- Qualification -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Qualification</label>
+                                    <input type="text"
+                                           class="form-control"
+                                           th:field="*{qualification}"
+                                           placeholder="Enter Qualification"
+                                           required>
+                                </div>
+
+                                <!-- Experience -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Experience</label>
+                                    <input type="number"
+                                           class="form-control"
+                                           th:field="*{experience}"
+                                           placeholder="Years of Experience"
+                                           required>
+                                </div>
+
+                                <!-- Skills -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Skills</label>
+                                    <textarea class="form-control"
+                                              rows="3"
+                                              th:field="*{keyskill}"
+                                              placeholder="Enter Skills"
+                                              required></textarea>
+                                </div>
+
+                                <!-- Gender -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label d-block">Gender</label>
+
+                              
+
+                                        <div class="form-check form-check-inline mt-4">
+                                            <input class="form-check-input"
+                                                   type="radio"
+                                                   th:field="*{gender}"
+                                                   value="Male"
+                                                   id="male">
+
+                                            <label class="form-check-label" for="male">
+                                                Male
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mt-4 ms-4">
+                                            <input class="form-check-input"
+                                                   type="radio"
+                                                   th:field="*{gender}"
+                                                   value="Female"
+                                                   id="female">
+
+                                            <label class="form-check-label" for="female">
+                                                Female
+                                            </label>
+                                        </div>
+
+                                 
+                                </div>
+
+                                <!-- Address -->
+                                <div class="col-12 mb-4">
+                                    <label class="form-label">Address</label>
+                                    <textarea class="form-control"
+                                              rows="3"
+                                              th:field="*{address}"
+                                              placeholder="Enter Address"
+                                              required></textarea>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="col-12">
+                                    <button type="submit"
+                                            class="btn text-white w-100 fw-bold"
+                                            style="background: linear-gradient(135deg, #2563EB 0%, #4F46E5 45%, #7C3AED 75%, #6D28D9 100%);">
+                                        Register
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+    <!-- Why Register Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark">
+                Why Register with HR Synergy?
+            </h2>
+            <p class="text-muted">
+                Unlock better career opportunities and stay connected with top employers.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 text-center p-4">
+                    <div class="mx-auto mb-3">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-4"
+                             style="width:70px;height:70px;
+                             background:linear-gradient(135deg,#4F46E5,#7C3AED);">
+                            <i class="bi bi-briefcase-fill text-white fs-3"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Latest Job Opportunities</h5>
+                    <p class="text-muted mb-0">
+                        Access the latest openings from trusted companies and recruiters.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 text-center p-4">
+                    <div class="mx-auto mb-3">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-4"
+                             style="width:70px;height:70px;
+                             background:linear-gradient(135deg,#4F46E5,#7C3AED);">
+                            <i class="bi bi-send-fill text-white fs-3"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Easy Job Applications</h5>
+                    <p class="text-muted mb-0">
+                        Apply for jobs quickly with a single click using your profile.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 text-center p-4">
+                    <div class="mx-auto mb-3">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-4"
+                             style="width:70px;height:70px;
+                             background:linear-gradient(135deg,#4F46E5,#7C3AED);">
+                            <i class="bi bi-list-check text-white fs-3"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Application Tracking</h5>
+                    <p class="text-muted mb-0">
+                        Track your application status and recruitment progress.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 text-center p-4">
+                    <div class="mx-auto mb-3">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-4"
+                             style="width:70px;height:70px;
+                             background:linear-gradient(135deg,#4F46E5,#7C3AED);">
+                            <i class="bi bi-person-badge-fill text-white fs-3"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Secure Candidate Profile</h5>
+                    <p class="text-muted mb-0">
+                        Maintain a professional and secure profile for recruiters.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 text-center p-4">
+                    <div class="mx-auto mb-3">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-4"
+                             style="width:70px;height:70px;
+                             background:linear-gradient(135deg,#4F46E5,#7C3AED);">
+                            <i class="bi bi-bell-fill text-white fs-3"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Interview Notifications</h5>
+                    <p class="text-muted mb-0">
+                        Receive timely interview alerts and important updates.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 text-center p-4">
+                    <div class="mx-auto mb-3">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-4"
+                             style="width:70px;height:70px;
+                             background:linear-gradient(135deg,#4F46E5,#7C3AED);">
+                            <i class="bi bi-rocket-takeoff-fill text-white fs-3"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Career Development</h5>
+                    <p class="text-muted mb-0">
+                        Grow your career with guidance, resources and opportunities.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</div>
+
+	</main>
+
+</body>
+
+</html>

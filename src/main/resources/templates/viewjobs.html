@@ -1,0 +1,740 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base :: layout(~{::main})}">
+	
+<body>
+	<main>
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h6 class="text-warning mb-3">
+HR SYNERGY CAREERS
+</h6>
+
+<h1 class="display-5">
+Find Your <span>Dream Job</span>
+</h1>
+
+<p class="mt-3">
+
+Explore exciting career opportunities and join
+our growing HR family.
+
+</p>
+
+<div class="mt-4">
+
+<a href="#" class="btn btn-orange px-4 rounded-pill me-2">
+<i class="bi bi-briefcase-fill"></i>
+View Jobs
+</a>
+
+<a href="#" class="btn btn-outline-light rounded-pill px-4">
+Register
+</a>
+
+</div>
+
+</div>
+
+<div class="col-lg-6 text-center">
+
+<img src="/images/corporate.jpeg"
+class="img-fluid"
+style="max-height:320px;">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Stats -->
+
+<div class="container stats">
+
+<div class="row g-4">
+
+<div class="col-md-3">
+
+<div class="card shadow text-center p-4">
+
+<div class="fs-2 text-primary">
+<i class="bi bi-briefcase-fill"></i>
+</div>
+
+<h3>1</h3>
+
+<small>Total Jobs</small>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow text-center p-4">
+
+<div class="fs-2 text-warning">
+<i class="bi bi-people-fill"></i>
+</div>
+
+<h3>63</h3>
+
+<small>Active Vacancies</small>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow text-center p-4">
+
+<div class="fs-2 text-success">
+<i class="bi bi-building"></i>
+</div>
+
+<h3>8</h3>
+
+<small>Departments</small>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow text-center p-4">
+
+<div class="fs-2 text-danger">
+<i class="bi bi-mortarboard-fill"></i>
+</div>
+
+<h3>Yes</h3>
+
+<small>Freshers Welcome</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Search -->
+
+<div class="container my-5">
+
+<div class="search-box">
+
+<div class="row g-3">
+
+<div class="col-lg-5">
+
+<input type="text"
+class="form-control"
+placeholder="Search jobs">
+
+</div>
+
+<div class="col-lg-2">
+
+<select class="form-select">
+<option>Department</option>
+<option>IT</option>
+<option>HR</option>
+<option>Sales</option>
+</select>
+
+</div>
+
+<div class="col-lg-2">
+
+<select class="form-select">
+<option>Experience</option>
+<option>Fresher</option>
+<option>1 Year</option>
+<option>2 Years</option>
+</select>
+
+</div>
+
+<div class="col-lg-2">
+
+<select class="form-select">
+<option>Qualification</option>
+<option>B.Tech</option>
+<option>MCA</option>
+<option>BCA</option>
+</select>
+
+</div>
+
+<div class="col-lg-1 d-grid">
+
+<button class="btn btn-warning">
+Search
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= OPEN JOBS ================= -->
+<!-- ================= CURRENT JOB OPENINGS ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="badge bg-light text-secondary rounded-pill px-3 py-2">
+                OPEN POSITIONS
+            </span>
+
+            <h2 class="fw-bold mt-3">
+                Current Job Openings
+            </h2>
+
+            <p class="text-muted">
+                Browse our latest opportunities and find the role that fits you best.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6" th:each="jobinfo : ${jobinfo}">
+
+                <div class="card shadow-sm border-0 rounded-4 h-100">
+
+                    <div class="card-body">
+
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <div>
+                                <h5 class="fw-bold mb-1"
+                                    th:text="${jobinfo.title}">
+                                    Java Developer
+                                </h5>
+
+                                <small class="text-muted">
+                                    HR Synergy
+                                </small>
+                            </div>
+
+                            <span class="badge bg-success">
+                                Hiring
+                            </span>
+
+                        </div>
+
+                        <hr>
+
+                        <p class="text-muted small"
+                           th:text="${jobinfo.description}">
+                            Description
+                        </p>
+
+                        <p class="mb-2">
+                            <i class="bi bi-geo-alt-fill text-danger"></i>
+                            <strong>Location :</strong>
+                            <span th:text="${jobinfo.location}"></span>
+                        </p>
+
+                        <p class="mb-2">
+                            <i class="bi bi-currency-rupee text-success"></i>
+                            <strong>Salary :</strong>
+                            <span th:text="${jobinfo.salary}"></span>
+                        </p>
+
+                        <p class="mb-2">
+                            <i class="bi bi-briefcase-fill text-primary"></i>
+                            <strong>Job Type :</strong>
+                            <span th:text="${jobinfo.jobtype}"></span>
+                        </p>
+
+                        <p class="mb-2">
+                            <i class="bi bi-calendar-event text-warning"></i>
+                            <strong>Last Date :</strong>
+                            <span th:text="${jobinfo.lastdate}"></span>
+                        </p>
+
+                        <p class="mb-3">
+                            <i class="bi bi-clock-history text-info"></i>
+                            <strong>Posted :</strong>
+                            <span th:text="${jobinfo.postdate}"></span>
+                        </p>
+
+                        <div class="d-grid">
+
+                            <a href="#"
+                               class="btn btn-primary rounded-pill">
+                                <i class="bi bi-send-fill"></i>
+                                Apply Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ================= WHY JOIN ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="badge rounded-pill bg-secondary">
+                WHY JOIN US
+            </span>
+
+            <h2 class="fw-bold mt-3">
+                Why Join HR Synergy?
+            </h2>
+
+            <p class="text-muted">
+                We invest in our people because they're the heart of everything we build.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+
+                <div class="card shadow-sm text-center p-4 h-100">
+
+                    <i class="bi bi-graph-up-arrow fs-1 text-warning"></i>
+
+                    <h5 class="mt-3">
+                        Career Growth
+                    </h5>
+
+                    <p class="small text-muted">
+                        Clear growth opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="card shadow-sm text-center p-4 h-100">
+
+                    <i class="bi bi-book fs-1 text-primary"></i>
+
+                    <h5 class="mt-3">
+                        Learning
+                    </h5>
+
+                    <p class="small text-muted">
+                        Continuous learning programs.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="card shadow-sm text-center p-4 h-100">
+
+                    <i class="bi bi-people-fill fs-1 text-success"></i>
+
+                    <h5 class="mt-3">
+                        Friendly Culture
+                    </h5>
+
+                    <p class="small text-muted">
+                        Work with amazing people.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="card shadow-sm text-center p-4 h-100">
+
+                    <i class="bi bi-cash-stack fs-1 text-danger"></i>
+
+                    <h5 class="mt-3">
+                        Competitive Salary
+                    </h5>
+
+                    <p class="small text-muted">
+                        Great salary & rewards.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ================= HIRING PROCESS ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="badge rounded-pill bg-light text-secondary">
+                THE PROCESS
+            </span>
+
+            <h2 class="fw-bold mt-3">
+                Our Hiring Process
+            </h2>
+
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col">
+
+                <i class="bi bi-file-earmark-text-fill fs-1 text-primary"></i>
+
+                <h6 class="mt-3">
+                    Apply
+                </h6>
+
+            </div>
+
+            <div class="col">
+
+                <i class="bi bi-search fs-1 text-warning"></i>
+
+                <h6 class="mt-3">
+                    Resume Screening
+                </h6>
+
+            </div>
+
+            <div class="col">
+
+                <i class="bi bi-laptop fs-1 text-success"></i>
+
+                <h6 class="mt-3">
+                    Technical Interview
+                </h6>
+
+            </div>
+
+            <div class="col">
+
+                <i class="bi bi-chat-dots-fill fs-1 text-info"></i>
+
+                <h6 class="mt-3">
+                    HR Discussion
+                </h6>
+
+            </div>
+
+            <div class="col">
+
+                <i class="bi bi-award-fill fs-1 text-danger"></i>
+
+                <h6 class="mt-3">
+                    Offer Letter
+                </h6>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= EMPLOYEE BENEFITS ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="badge bg-secondary rounded-pill">
+                BENEFITS
+            </span>
+
+            <h2 class="fw-bold mt-3">
+                Employee Benefits
+            </h2>
+
+            <p class="text-muted">
+                We take care of our people, on and off the clock.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm p-4 h-100">
+                    <i class="bi bi-heart-pulse-fill text-danger fs-2"></i>
+                    <h6 class="mt-3">Health Insurance</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm p-4 h-100">
+                    <i class="bi bi-airplane-fill text-warning fs-2"></i>
+                    <h6 class="mt-3">Paid Leave</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm p-4 h-100">
+                    <i class="bi bi-trophy-fill text-warning fs-2"></i>
+                    <h6 class="mt-3">Performance Bonus</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm p-4 h-100">
+                    <i class="bi bi-book-fill text-primary fs-2"></i>
+                    <h6 class="mt-3">Learning</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm p-4 h-100">
+                    <i class="bi bi-balance-scale text-success fs-2"></i>
+                    <h6 class="mt-3">Work-Life Balance</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm p-4 h-100">
+                    <i class="bi bi-calendar-event-fill text-info fs-2"></i>
+                    <h6 class="mt-3">Annual Events</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm p-4 h-100">
+                    <i class="bi bi-graph-up-arrow text-primary fs-2"></i>
+                    <h6 class="mt-3">Career Growth</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-center shadow-sm p-4 h-100">
+                    <i class="bi bi-people-fill text-success fs-2"></i>
+                    <h6 class="mt-3">Team Support</h6>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="py-5 text-center text-white"
+style="background:#183546;">
+
+<div class="container">
+
+<h2 class="fw-bold">
+Ready to Start Your Career?
+</h2>
+
+<p class="mb-4">
+Join our growing team and build something amazing.
+</p>
+
+<a href="#" class="btn btn-warning rounded-pill px-4 me-2">
+Apply Now
+</a>
+
+<a href="#" class="btn btn-outline-light rounded-pill px-4">
+Register
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-md-3">
+
+<div class="card text-center shadow-sm p-4">
+
+<i class="bi bi-envelope-fill fs-2 text-primary"></i>
+
+<h5 class="mt-3">
+Email
+</h5>
+
+<p class="text-muted mb-0">
+careers@hrsynergy.com
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card text-center shadow-sm p-4">
+
+<i class="bi bi-telephone-fill fs-2 text-success"></i>
+
+<h5 class="mt-3">
+Phone
+</h5>
+
+<p class="text-muted mb-0">
++91 9876543210
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card text-center shadow-sm p-4">
+
+<i class="bi bi-geo-alt-fill fs-2 text-danger"></i>
+
+<h5 class="mt-3">
+Office
+</h5>
+
+<p class="text-muted mb-0">
+Lucknow, Uttar Pradesh
+</p>
+
+</div>
+
+</div>
+	</main>
+</body>
+
+<div class="col-md-3">
+
+<div class="card text-center shadow-sm p-4">
+
+<i class="bi bi-clock-fill fs-2 text-warning"></i>
+
+<h5 class="mt-3">
+Working Hours
+</h5>
+
+<p class="text-muted mb-0">
+Mon - Sat (9AM - 6PM)
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= REGISTER BANNER ================= -->
+
+<section class="container mb-5">
+
+<div class="card shadow border-0">
+
+<div class="card-body p-4">
+
+<div class="row align-items-center">
+
+<div class="col-lg-8">
+
+<h4 class="fw-bold">
+Still Looking?
+</h4>
+
+<p class="text-muted mb-0">
+Register your profile and we'll contact you when a suitable job is available.
+</p>
+
+</div>
+
+<div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+
+<a href="#" class="btn btn-warning rounded-pill px-4 me-2">
+Register
+</a>
+
+<a href="#" class="btn btn-outline-dark rounded-pill px-4">
+Contact HR
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+

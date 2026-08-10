@@ -1,0 +1,95 @@
+<html lang="en" th:replace="~{admin/adminbase :: layout(~{::main})}">
+<body>
+ <main>
+ 	<h2 style="color:green;text-align:center;">Change Admin Password</h2>
+ 	<div th:if="${msg}">
+ 	<p style="color:red;text-align:center;" th:text="${msg}"></p>
+ 	</div>
+ 	<hr/>
+ 	<form method="post">
+
+<div class="container py-4">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-6">
+
+            <div class="card shadow border-0">
+
+                <!-- Header -->
+                <div class="card-header text-white"
+                     style="background: linear-gradient(135deg, #2563EB 0%, #4F46E5 45%, #7C3AED 75%, #6D28D9 100%);">
+
+                    <h3 class="mb-1  text-white fw-bold">
+                        <i class="bi bi-shield-lock me-2"></i>
+                        Change Password
+                    </h3>
+
+                    <small>Update your account password securely.</small>
+
+                </div>
+
+                <!-- Body -->
+                <div class="card-body p-4">
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            Old Password
+                        </label>
+
+                        <input type="password"
+                               name="oldpassword"
+                               class="form-control"
+                               placeholder="Enter Old Password"
+                               style="height:45px;border-radius:10px;"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            New Password
+                        </label>
+
+                        <input type="password"
+                               name="newpassword"
+                               class="form-control"
+                               placeholder="Enter New Password"
+                               style="height:45px;border-radius:10px;"
+                               required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">
+                            Confirm Password
+                        </label>
+
+                        <input type="password"
+                               name="confirmpassword"
+                               class="form-control"
+                               placeholder="Confirm New Password"
+                               style="height:45px;border-radius:10px;"
+                               required>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit"
+                                class="btn btn-primary py-2 fw-semibold">
+                            <i class="bi bi-key-fill me-2"></i>
+                            Change Password
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</form>
+ </main>
+</body>
+</html>

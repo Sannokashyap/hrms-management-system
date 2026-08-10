@@ -1,0 +1,45 @@
+body{
+    background:#f8f9fa;
+}
+
+/* Hero */
+
+.hero{
+    background:#183546;
+    color:white;
+    padding:90px 0;
+}
+
+.hero h1{
+    font-weight:700;
+}
+
+.hero span{
+    color:#f9b233;
+}
+
+.btn-orange{
+    background:#f9b233;
+    color:white;
+}
+
+.btn-orange:hover{
+    background:#e39d18;
+    color:white;
+}
+
+.stats{
+    margin-top:-55px;
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+}
+
+.search-box{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
